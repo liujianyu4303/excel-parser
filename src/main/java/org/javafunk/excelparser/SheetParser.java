@@ -48,7 +48,7 @@ public class SheetParser {
      * @deprecated Pass an error handler lambda instead (see other signature)
      */
     @Deprecated
-    public <T> List<T> createEntity(Sheet sheet, String sheetName, Class<T> clazz) {
+    public <T> List<T> createEntity(Sheet sheet, Class<T> clazz) {
         return createEntity(sheet, clazz, error -> {
             throw error;
         });
